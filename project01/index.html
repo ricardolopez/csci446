@@ -13,49 +13,60 @@
 </head>
 
 <body>
-
-	<div id="header">
-		<h1>The Magic Life Figure-Outer!</h1>
-		<h4>Figuring out your life for you, so you don't have to...</h4>
-	</div>
-
-	<div id="links">
-		<a href="" title="Home">Home</a>
-		<a href="" title="Interests">Interests</a>
-		<a href="" title="Health">Health</a>
-		<a href="" title="Academic">Academic</a>
-		<a href="" title="Professional">Professional</a>
-		<a href="" title="Fun">Fun</a>
-		<a href="" title="Evil">Evil</a>
-	</div>
-
 	<div id="content">
-		<div id="left-column">
-			<form action="" method="POST">
-				<h2>Lorem Ipsum Dolor Sit Amet.</h2>
-				<div id="inner-left"
-				<label>How do you feel today?</label>
-				<input type="text" id="feeling"/>
-				<label>How would you like to feel?
-					<br>
-					(choose all that apply)</label>
-				<select>
-					<option>Comfortably numb</option>
-					<option>Grumpy as poop, you jerk</option>
-					<option>Happy like I'm on controlled substances</option>
-					<option>Normal. Absolutely normal</option>
-				</select>
-				<input type="submit" value="Feel me!" onclick="checkValidity()">
-			</form>
+		<div id="header">
+			<h1>The Magic Life Figure-Outer!</h1>
+			<h5 id="footnote">Figuring out your life for you, so you don't have to...</h5>
 		</div>
-		<div id="right-column">
-			<h3>Current Progress in Life</h3>
-			<span>Mediocre. You should really enjoy life more.</span>
-		</div>
-	</div>
 
-	<div id="footer">
-		<span>&copy; 2011 Borg-Like Monstrosity of Mind Control, Inc. All rights reserved.</span>
+		<div id="links">
+			<p><a href="" title="Home">Home</a></p>
+			<p><a href="" title="Interests">Interests</a></p>
+			<p><a href="" title="Health">Health</a></p>
+			<p><a href="" title="Academic">Academic</a></p>
+			<p><a href="" title="Professional">Professional</a></p>
+			<p><a href="" title="Fun">Fun</a></p>
+			<p><a href="" title="Evil">Evil</a></p>
+		</div>
+
+		<div id="form">
+			<div id="left_column">
+				<h2>Lorem Ipsum Dolor Sit Amet.</h2>
+				<div id="right_column">
+					<h3>Current Progress in Life</h3>
+					<p>Mediocre. You should really enjoy life more.</p>
+				</div>
+				<form action="" method="GET">
+					<div id="inner-left">
+						<div>
+							<label>How do you feel today?</label>
+							<input type="text" id="feeling"/>
+						</div>
+
+						<div id="feel">
+							<label>How would you like to feel?</label>
+							<br>
+							<label>(choose all that apply)</label>
+						</div>
+						<select multiple>
+							<option>Comfortably numb</option>
+							<option>Grumpy as poop, you jerk</option>
+							<option>Happy like I'm on controlled substances</option>
+							<option>Normal. Absolutely normal</option>
+						</select>
+						
+						<div id="button">
+							<input id="submit" type="submit" value="Feel me!" onclick="check()">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div id="footer">
+			<span>&copy; 2011 Borg-Like Monstrosity of Mind Control, Inc. All rights reserved.</span>
+		</div>
 	</div>
 
 </body>
+</html>

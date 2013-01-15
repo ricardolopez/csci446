@@ -1,9 +1,6 @@
-var check;
-
-function checkValidity() {
-	check = document.getElementById('feeling').value;
-	if(check.size == 0 || check == "" || check == null) {
+function check() {
+	var check = document.getElementById('feeling');
+	if(check.value.size == 0 || check.value == "" || check.value == null) {
 		alert("Surely you feel something!");
 	} 
-	return false;
 }
