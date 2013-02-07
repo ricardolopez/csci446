@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<!-- Ricardo Lopez -->
+<!-- January 28 2012 -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>The List</title>
+</head>
+
+<body>
+	<h1>Rolling Stone's Top 100 Albums of All Time</h1>
+	<div id="content">
+		<form id="form" action="/list" method="GET">
+			<label for="order">Sort By: </label>
+			<select name="order">
+				<% @sort_types.each do |key, value| %>
+					<option value="<%= key %>"><%= value %></option>
+				<% end %>
+			</select>
+			<label for="rank">Choose rank to highlight: </label>			
+			<select name="rank">
+				<% @list.each do |album| %>
+					<option value="<%= album.rank %>"><%= album.rank %></option>
+				<% end %>
+			</select>
+			<input type="submit" value="Display List" />
+		</form>
+	</div>
+</body>
+
+</html>
