@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
 <!-- Ricardo Lopez -->
-<!-- January 28 2012 -->
+<!-- February 7 2013 -->
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -15,10 +15,10 @@
 	<h5>Sorted by <%= @sort.capitalize %></h5>
 	<div id="ranking">
 		<table>
-			<% @list.each do |album| %>
+			<% @albums.each do |album| %>
 			<tr <%= " class=\"highlight\"" if @highlight == album.rank %>>
 				<td><%= album.rank %></td>
-				<td><%= album.name %></td>
+				<td><%= album.title %></td>
 				<td><%= album.year %></td>
 			</tr>
 			<% end %>
