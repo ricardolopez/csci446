@@ -1,0 +1,12 @@
+<h5>Sorted by <%= @sort.capitalize %></h5>
+<div id="ranking">
+	<table>
+		<% @albums.each do |album| %>
+		<tr <%= " class=\"highlight\"" if @highlight == album.rank %>>
+			<td><%= album.rank %></td>
+			<td><%= album.title %></td>
+			<td><%= album.year %></td>
+		</tr>
+		<% end %>
+	</table>
+</div>

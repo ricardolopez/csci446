@@ -1,0 +1,17 @@
+<div id="content">
+	<form id="form" action="/list" method="POST">
+		<label for="order">Sort By: </label>
+		<select name="order">
+			<% @sort_types.each do |key, value| %>
+				<option value="<%= key %>"><%= value %></option>
+			<% end %>
+		</select>
+		<label for="rank">Choose rank to highlight: </label>			
+		<select name="rank">
+			<% 100.times do |rank| %>
+				<option value="<%= rank+1 %>"><%= rank+1 %></option>
+			<% end %>
+		</select>
+	<input type="submit" value="Display List" />
+	</form>
+</div>
