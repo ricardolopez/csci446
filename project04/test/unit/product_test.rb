@@ -12,8 +12,8 @@ class ProductTest < ActiveSupport::TestCase
   end
 
   test "product price must be positive" do
-  	product = Product.new(:title => "My Book Title"
-  							:description => "yyy"
+  	product = Product.new(:title => "My Book Title",
+  							:description => "yyy",
   							:image_url => "zzz.jpg")
   	product.price = -1
   	assert product.invalid?
@@ -41,6 +41,7 @@ class ProductTest < ActiveSupport::TestCase
   	bad.each do |name|
   		assert new_product(name).invalid?, "#{name} shouldn't be valid"
   	end
+  end
 
   def new_product(image_url)
   	Product.new(:title => "My Book Title",
